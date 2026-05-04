@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerênciador de Tarefas - Gatinhos</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/icon_cat.jpg">
+</head>
+    <body>
+        <div class="wrap">
+            <header>
+                <img src="/images/icon_cat.jpg" alt="Gatinho">
+                <h1>Minhas tarefas</h1>
+                <p class="subtitle">Gatinhos fazem uma coisa de cada vez</p>
+            </header>
+
+            <main class="card">
+                <form class="form-row" id="taskForm" action="#" method="dialog">
+                    <input type="text" id="taskInput" placeholder="O que você precisa fazer?" autocomplete="off" maxlength="200" aria-label="Nova tarefa">
+                    <button type="submit" id="addBtn">Adicionar</button>
+                </form>
+                <ul id="taskList" aria-live="polite"></ul>
+                <p class="empty" id="emptyMsg" hidden>Nenhuma tarefa ainda. Adicione a primeira acima.</p>
+            </main>
+
+            <footer>
+                <p>&copy; 2026 Gerênciador de Tarefas - Gatinhos</p>
+                <p>Criado por Oska Mattheus</p>
+            </footer>
+        </div>
+        
+        <script src="/js/script.js"></script>
+
+    </body>
+</html>

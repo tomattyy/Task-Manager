@@ -1,0 +1,200 @@
+:root {
+    --color-bg: #d7cec4;
+    --color-bg-2: #c5bbb0;
+    --color-border-primary: #8a6a55;
+    --color-border-secondary: #7f7269;
+    --color-accent: #b28a6d;
+    --color-accent-2: #5b4f49;
+    --color-text: #3f3633;
+    --color-done: #b8d4a8;
+    --color-del: #9a5c5c;
+    --color-text-muted: #a79a90;
+    --radius-12px: 12px;
+    --radius-8px: 8px;
+    --radius-6px: 6px;
+    --shadow: 0 4px 20px rgb(107, 66, 50, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("/images/background_two_cats.png");
+    background-color: var(--color-bg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-text);
+}
+
+.wrap {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+header img{
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-border-primary);
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 1.35rem;
+    margin: 0 0 0.25rem;
+}
+
+.subtitle {
+    color: var(--color-accent)
+}
+
+.card {
+    background: var(--color-bg-2);
+    border-radius: var(--radius-12px);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.form-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 0.65rem 0.85rem;
+    border: 2px solid var(--color-border-secondary);
+    border-radius: var(--radius-8px);
+    font-size: 1rem;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+#addBtn {
+    padding: 0.65rem 1rem;
+    background: var(--color-border-secondary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-8px);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: var(--color-accent-2);
+}
+
+#taskList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-bg-2);
+}
+
+#taskList li:last-child {
+    border-bottom: none;
+}
+
+#taskList label {
+    flex: 1;
+    cursor: pointer;
+    user-select: none;
+}
+
+#taskList li.done label {
+    text-decoration: line-through;
+    color: var(--color-done);
+}
+
+.del {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border-secondary);
+    border-radius: var(--radius-6px);
+}
+
+.del:hover {
+    background: var(--color-del);
+}
+
+.empty {
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: 1rem 0;
+    font-size: 0.95rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--color-text);
+}
+
+
+@media (max-width: 768px) {
+
+    body {
+        background-image: url(/images/background_cat_paws_mobile.png);
+        background-repeat: no-repeat;
+        background-size: 130vh;
+    }
+
+    footer {
+        margin-top: 11rem;
+        tex
+    }
+
+    .form-row {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #taskInput {
+        padding: 0.65rem 0.85rem;
+        border: 2px solid var(--color-border-secondary);
+        border-radius: var(--radius-8px);
+        font-size: 1rem;
+    }
+
+    .card {
+        background: var(--color-bg-2);
+        border-radius: var(--radius-12px);
+        padding: 1.25rem;
+        box-shadow: var(--shadow);
+    }  
+
+    #taskInput {
+        flex: 1;
+        padding: 0.65rem 0.85rem;
+        border: 2px solid var(--color-border-secondary);
+        border-radius: var(--radius-8px);
+        font-size: 1rem;
+    }
+}
